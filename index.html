@@ -16,7 +16,124 @@
     <script id="hexo-configurations">
     let CONFIG = {"hostname":"yoursite.com","root":"/","localsearch":{"enable":true,"trigger":"auto","unescape":false,"preload":false},"themeInfo":{"name":"ILS","version":"1.1.2","author":"XPoet","repository":"https://github.com/XPoet/hexo-theme-ils"}};
   </script>
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.0.2"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -38,7 +155,7 @@
                     <a class="active"
                        href="/"
                     >
-                        HOME
+                        首页
                     </a>
                 </li>
             
@@ -46,7 +163,7 @@
                     <a class=""
                        href="/archives"
                     >
-                        ARCHIVES
+                        归档
                     </a>
                 </li>
             
@@ -62,12 +179,12 @@
             
                 <li class="drawer-menu-item">
                     <a class="active"
-                       href="/">HOME</a>
+                       href="/">首页</a>
                 </li>
             
                 <li class="drawer-menu-item">
                     <a class=""
-                       href="/archives">ARCHIVES</a>
+                       href="/archives">归档</a>
                 </li>
             
         </ul>
@@ -92,15 +209,22 @@
             <li class="home-article-item">
 
                 <h3 class="home-article-title">
-                    <a href="/2020/08/19/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0%E6%B3%95-Lagrange-multiplier/">
+                    <a href="/2020/08/19/Rainy-Night-in-Georgia/">
                         
-                        拉格朗日乘数法(Lagrange multiplier)
+                        Rainy Night in Georgia
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        &amp;emsp&amp;emsp求函数极值是微积分研究的重要问题。拉格朗日乘数法解决的核心问题就是对于自变量拥有约束条件（尤其是约束条件不能被化为显函数）的多元函数，如何求出其极值。以二元函数为例，对于函数$z=f(x,y)$,有约束条件$g(x,y)=c$.假设$z$在$(x_0,y_0...
+                        
+​​“看书只能落得孤独，对吧？”
+“噢。”
+“书那玩意是煮意大利面时用来打发时间才一只手拿着看的，明白？”
+“嗯。”
+“好——嘞……唔……看来我们可以交谈了。”
+
+3:39&nbsp;&nbsp;&nbsp;&nbsp;此时我所做的，正是一手拿着书，一手用筷子拨动着翻滚的沸水里的意大利细面条...
                     
                 </div>
 
@@ -117,7 +241,39 @@
                         
                     </div>
                     
-                    <a href="/2020/08/19/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0%E6%B3%95-Lagrange-multiplier/">Read more <i class="fa fa-angle-right"></i></a>
+                    <a href="/2020/08/19/Rainy-Night-in-Georgia/">阅读全文 <i class="fa fa-angle-right"></i></a>
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                <h3 class="home-article-title">
+                    <a href="/2020/08/19/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0%E6%B3%95-Lagrange-multiplier/">
+                        
+                        拉格朗日乘数法(Lagrange multiplier)
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        &amp;emsp&amp;emsp求函数极值是微积分研究的重要问题。拉格朗日乘数法解决的核心问题就是对于自变量拥有约束条件（尤其是约束条件不能被化为显函数）的多元函数，如何求出其极值。以二元函数为例，对于函数,有约束条件.假设在处取得极值，并且在的领域内都具有连续的一阶偏导数.那么，首先借助...
+                    
+                </div>
+
+                <div class="home-article-meta-info">
+                    <div class="article-date">
+                        <span><i class="fa fa-pencil-square-o"></i> 2020-08-19</span>
+                        
+                            <span>
+                            <i class="fa fa-folder"></i>
+                            <ul>
+                                
+                            </ul>
+                        </span>
+                        
+                    </div>
+                    
+                    <a href="/2020/08/19/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0%E6%B3%95-Lagrange-multiplier/">阅读全文 <i class="fa fa-angle-right"></i></a>
                 </div>
             </li>
         
@@ -178,7 +334,7 @@
             &copy; 2020 <a href="/">WadeChiang</a>
         </div>
         <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a
                     href="https://github.com/XPoet/hexo-theme-ils" target="_blank">ILS v1.1.2</a>
         </div>
         
@@ -197,7 +353,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="Search..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
