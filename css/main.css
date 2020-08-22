@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #37a233;
+  background: #3ef601;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2439,6 +2439,14 @@ mjx-container + br {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+body {
+  background-image: url("https://i.loli.net/2020/08/22/o7qTHSengz5BNrC.jpg");
+  height: 100%;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 body {
   background-image: url("https://i.loli.net/2020/08/22/o7qTHSengz5BNrC.jpg");
