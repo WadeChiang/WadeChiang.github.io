@@ -63,8 +63,7 @@
 <p>&emsp;</p>
 <p>　&nbsp;&nbsp;&nbsp;&nbsp;风里多了潮土油的气味。</p>
 <p>&emsp;</p>
-<p>0:11</p>
-<p>　&nbsp;&nbsp;&nbsp;&nbsp;将青酱倒入盘中时，雨点开始拍在泥土上。</p>
+<h2><span id="011">0:11</span></h2><p>　&nbsp;&nbsp;&nbsp;&nbsp;将青酱倒入盘中时，雨点开始拍在泥土上。</p>
 <p>&emsp;</p>
 <p>　&nbsp;&nbsp;&nbsp;&nbsp;来吧，甜美的雨。</p>
 <p>　&nbsp;&nbsp;&nbsp;&nbsp;把烈阳从我这里夺走的汗水和眼泪统统归还</p>
@@ -73,7 +72,8 @@
   <entry>
     <title>拉格朗日乘数法</title>
     <url>/2020/06/20/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E6%95%B0%E6%B3%95/</url>
-    <content><![CDATA[<h2><span id="拉格朗日乘数法的推导">拉格朗日乘数法的推导</span></h2><p>&emsp;&emsp;求函数极值是微积分研究的重要问题。拉格朗日乘数法解决的核心问题就是对于自变量拥有约束条件（尤其是约束条件不能被化为显函数）的多元函数，如何求出其极值。以二元函数为例，对于函数$z=f(x,y)$,有约束条件$g(x,y)=c$.假设$z$在$(x_0,y_0)$处取得极值，并且$f(x,y),g(x,y)$在$(x_0,y_0)$的领域内都具有连续的一阶偏导数.<br><strong>&emsp;&emsp;那么，首先借助几何直观来观察取得极值的必要条件.</strong>  </p>
+    <content><![CDATA[<h2><span id="拉格朗日乘数法的推导">拉格朗日乘数法的推导</span></h2><p>&emsp;&emsp;求函数极值是微积分研究的重要问题。拉格朗日乘数法解决的核心问题就是对于自变量拥有约束条件（尤其是约束条件不能被化为显函数）的多元函数，如何求出其极值。以二元函数为例，对于函数$z=f(x,y)$,有约束条件$g(x,y)=c$.假设$z$在$(x_0,y_0)$处取得极值，并且$f(x,y),g(x,y)$在$(x_0,y_0)$的领域内都具有连续的一阶偏导数.  </p>
+<p><strong>&emsp;&emsp;那么，首先借助几何直观来观察取得极值的必要条件.</strong>  </p>
 <p><img src="https://i.loli.net/2020/08/19/gaSd9vAzJ2TnFbw.png" alt="直观图像"></p>
 <p>如上图所示，作出$z=f(x,y)$的等高线图。此时不难发现：<br>约束曲线$g(x,y)=c$在与$z=f(x,y)$的某条等高线$f(x,y)=d_2$相切时,$z$取得极值。此点处$f(x,y)=d_2$和$g(x,y)=c$拥有共线的法向量，因此二者的梯度也共线$\Rightarrow \mathbf{grad}{f(x_0,y_0)}=-\lambda\mathbf{grad}(g(x_0,y_0)-c)\Rightarrow f_x\boldsymbol{i}+f_y\boldsymbol{j}=-\lambda(g_x\boldsymbol{i}+g_y\boldsymbol{j})$  </p>
 <script type="math/tex; mode=display">\Rightarrow  
@@ -162,7 +162,7 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 <p><img src="https://i.loli.net/2020/08/22/aZ1q3EYUOxAhv6r.jpg" alt="今日"></p>
 <p>第一张是一年前的今日，后一张则是惨淡的今天。</p>
 <blockquote>
-<p>也许在不短的一段时间里，这些文字都不会有人看到了。当然，并非所有的文字都是为了让&gt;人看见(尽管我有这样的倾向)，正如并非所有的呼喊都有回声。</p>
+<p>也许在不短的一段时间里，这些文字都不会有人看到了。当然，并非所有的文字都是为了让人看见(尽管我有这样的倾向)，正如并非所有的呼喊都有回声。</p>
 </blockquote>
 ]]></content>
   </entry>
