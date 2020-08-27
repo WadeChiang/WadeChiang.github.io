@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="RealitySKEW">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:site_name" content="RealitySKEW">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Wade Chiang">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>RealitySKEW</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">RealitySKEW</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/27/%E5%B0%BE%E5%A3%B0%E5%92%8C%E5%BA%8F%E7%AB%A0-%E5%A4%A9%E5%A4%A7%E4%B9%8B%E8%AF%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Wade Chiang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RealitySKEW">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/01/27/%E5%B0%BE%E5%A3%B0%E5%92%8C%E5%BA%8F%E7%AB%A0-%E5%A4%A9%E5%A4%A7%E4%B9%8B%E8%AF%AF/" class="post-title-link" itemprop="url">尾声和序章--天大之误</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-01-27 13:04:59" itemprop="dateCreated datePublished" datetime="2016-01-27T13:04:59+08:00">2016-01-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-27 13:43:06" itemprop="dateModified" datetime="2020-08-27T13:43:06+08:00">2020-08-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Written by Gregory &amp; Wade</p>
+<p>&emsp;&emsp;「地球…你是说旧地？旧地早就在83年的天大之误里被黑洞撕扯成了轨道上的碎片了。」领事疑惑地抬起手，揉了揉鼻子。这实在太奇怪了，这位一直嚷嚷着询问这是不是地球的年轻人好像连最基本的环网历史都不了解。这怎么可能？即便是海伯利安这样偏僻的星球，环网也在超光发射机的引导，弦的振动下一刻不停的运作着，只要愿意，任何人都可以随时接入环网，关于旧地这样的词条，信息多得数不胜数。</p>
+<p>&emsp;&emsp;「83年？天大之误？见鬼！天大之误是什么东西？在苏维埃过去的三个世纪里，有任何一个83年发生过被这样称呼的事件吗？」几乎是怒吼出这句话后，年轻人的脸涨得通红，「这位…领事先生，您在愚弄我吗？」</p>
+<p>&emsp;&emsp;领事突然从那张烫有三条金色短线的木桌后跳了起来，膝盖撞在了实木上，「你说什么？！苏维埃？</p>
+<p>&emsp;&emsp;领事的失态吓了年轻人一跳，他刚打算起身，领事已经疾步走到了他面前，狠狠按住了他的肩膀。</p>
+<p>&emsp;&emsp;历史课，小子。2283年，天大之误，苏联人，」领事感到自己喉头发紧，「因为他妈的苏联人。在基辅的实验小组搞砸了一切，失控的黑洞掉进地心。旧地早就毁灭了。</p>
+<p>&emsp;&emsp;领事指着烫在桌面上的三条横线，「人类用了上百年从地球离开，经过百年的大流亡后才散布到足够大的星域里，最后，霸主政权建立起来。</p>
+<p>&emsp;&emsp;年轻人这才意识到，那怪异的烫金不是装饰，而是标志。它代表着这个他难以理解的宇宙里最大的政体。</p>
+<p>&emsp;&emsp;这些历史，连环网边缘地区的小孩都能扳着手指头告诉你，而你，在海伯利安上出现的你，」领事微微加力，年轻人的肩膀被他捏的有些疼，「却对这段历史毫不知情。</p>
+<p>&emsp;&emsp;要么是你的脑袋出了问题，要么是你人出了问题。我更倾向于后一种可能，所以，你是谁？」领事大踏步的走回自己的高背椅，坐了下来，双手抵在上唇上，直视着年轻人的眼睛。</p>
+<p>&emsp;&emsp;<br>年轻人被领事直视得极其不自在，他扭过头去，喉结上下滑动，「我想…我没办法证明自己的身份。」他抬起手，想拭去额头上的汗珠，旋即发现自己手心也已经被汗水浸湿。<br>我猜也是。」</p>
+<p>&emsp;&emsp;<br>但是…我记得一些东西。李维，李特维奇，我来自你所说的那个基辅小组。」</p>
+<p>&emsp;&emsp;<br>领事差点咬掉自己的舌头。</p>
+<h2><span id="2282年11月26日">2282年11月26日</span></h2><p>&emsp;&emsp;<br>基辅时间12:57分 库尔斯克六号空间站工程模块接口</p>
+<p>&emsp;&emsp;<br>李特维奇突然想起小时候在马里乌波尔，祖母对他说过的一句话：万圣节过后的糖果，就没那么好吃了。</p>
+<p>&emsp;&emsp;<br>“你看起来可完全不像一副要收别人大礼的样子，”伊格里·马瑟走到他身旁。</p>
+<p>&emsp;&emsp;<br>“‘两万立方米的额外空间，用于进行轨道平衡的小型姿势调整喷嘴’‘租赁协议的最后一部分’，该死，伊格里，这些鬼东西不该在这时候来。”研究就快接近尾声了，剩下的只差做出应用成品，虽然现有的设施空间小到可怜，但比起费时费力地把人员设备转移到加装模块去，李特维奇倒宁愿在原有条件下快点完成项目。他在终端上调出空间站外部摄像头的影像：一个粗短的棱柱伏在库尔斯克六号的工程接口上，封装外壳简单粗暴地把它武装成一条丑陋的钢铁水蛭。</p>
+<p>&emsp;&emsp;<br>“那群天杀的俄罗斯人就算不懂守时，至少该懂点美学吧？”李特维奇嘟囔道。</p>
+<p>&emsp;&emsp;<br>“在这种政治气氛下突然做出这样的举动，要我说，准不是好事。”伊格里推了下眼镜，抬头纹浮现又消失。“可能是一针麻药，或者……我说不准。”</p>
+<p>&emsp;&emsp;<br>李特维奇盯着库尔斯克六号古老的钢焊地板，好一会没有接茬。突然又开口，语速快得惊人：“俄国佬应该不知道我们在这干什么吧？”</p>
+<p>&emsp;&emsp;<br>两个人短暂对视，从对方眼中互相读出了些许不安的影子。</p>
+<p>&emsp;&emsp;<br>“模块通电倒计时30秒。”无感情的女声响起，聚集在接口舱的工程师与指挥官们立刻肃静下来。在这之前，他们也与他们的正副主任，伊格里与李特维奇一样，议论不止。</p>
+<p>&emsp;&emsp;<br>“气压平衡，气密门打开。通电倒计时20秒。”气密门缓缓收回，模块内部开始暴露于众人眼前。此刻形成了绝妙的光影差异：空间站主体处处洒落柔和的冷光，而模块内则是墨一般的黑，越是向内越是浓重。</p>
+<p>&emsp;&emsp;<br>不，不是全黑。李特维奇一愣，有些不相信自己的眼睛。在库六的光线投射下，模块里闪现出点点不均匀的金属质感反光。随气密门向两边缩回，光点越发繁多。不管里面有什么，肯定没“两万立方米的存储空间”那么简单。窃窃私语立刻传染开去。</p>
+<p>&emsp;&emsp;<br>“安全检查完毕。模块通电，封装外壳脱离。”</p>
+<p>&emsp;&emsp;<br>伴随着爆破螺栓的噼啪声，灯光亮起。众人面前的巨大钢铁结构几乎填满了模块内的全部空间。</p>
+<p>&emsp;&emsp;<br>死一般的沉默。</p>
+<p>&emsp;&emsp;<br>李特维奇第一个反应过来：“调出外部摄像头，快！”</p>
+<p>&emsp;&emsp;<br>掏出随身携带的终端后，所有人都惊呆在了原地：摄像头正对着的是一组巨大的推进器，原本覆盖着它们的封装外壳碎片此时正均匀地向四周翻滚、散开，金属的反光在众人视野里规律地重复。</p>
+<p>&emsp;&emsp;<br>“见鬼……好一个‘姿势调整喷嘴’。”一个有些发颤的嗓音说，“按直径来看，这么大的喷口，产生的推力都能把我们的轨道拉上月球了。”</p>
+<p>&emsp;&emsp;<br>“也能把我们送回地球。”伊格里的声音不带感情，却如真空般冰凉。李特维奇不由出了一身冷汗。不，不，千万别是这样……</p>
+<p>&emsp;&emsp;<br>“马瑟同志，你这话的意……”身后的人没能把话说完，突如其来的黑暗与其引发的惊叫就打断了他。整个空间站都断电了，库尔斯克六号陷入了黑暗，只剩一点惨淡的阳光从走廊的舷窗照射进来。</p>
+<p>&emsp;&emsp;<br>圆环状的中央组件嗡嗡作响，声音一直传到工程接口——这声音来自空间站中心的飞轮。在保险机制的作用下，维持库尔斯克六号自转的巨大角动量被缓缓导入飞轮中。抽气机因为断电而停止了工作，飞转的飞轮直接暴露在空气的摩擦中，发出低沉的嗡嗡声。</p>
+<p>&emsp;&emsp;<br>随着噪音增大，舷窗外的景色难以察觉地定格在了星空一角。空间站内所有人对地面的压力彻底消失。他们失重了。</p>
+<p>&emsp;&emsp;<br>李特维奇喉头发紧：他的预感正在一步步变成现实。</p>
+<p>&emsp;&emsp;<br>“系统重启完成倒数，十、九、八、七……”无感情的女声再次响起。</p>
+<p>&emsp;&emsp;<br>重启……推进器……主机……“见鬼！”李特维奇刚大叫出声，那句他最不愿听见的话就传入了他的耳朵。</p>
+<p>&emsp;&emsp;<br>“超驰操作确认。推进器点火。”</p>
+<p>&emsp;&emsp;<br>人群又爆发出一阵惊叫——广播的内容或许尚不足以使他们如此震惊，但舷窗外巨大的狭长火焰绝对可以。推进器产生的焰尾的亮光让船舱内再次亮如白昼，震动骤然增大，一声轰鸣在船舱内一遍遍回响。李维感到一股巨大的力量将他拉扯向走廊的一端，在淹没万物的白光中，他看见所有人都与他一样，被巨大的加速度狠狠拍在了地上。</p>
+<h2><span id="基辅时间1303分-伊兹梅尔航天中心-指挥大厅">基辅时间13:03分 伊兹梅尔航天中心 指挥大厅</span></h2><p>&emsp;&emsp;结束今天的第2349次轨道计算时，她，或者说人工智能“伊琳娜”，发现事情开始变得不对劲了。</p>
+<p>&emsp;&emsp;今天的前2348次计算结果都完全处于正常范围内，但根据这一次的结果比对，恐怕库尔斯克六号空间站有了大麻烦——它的实时轨道偏离了相当大的范围，而在她的记录中，自从半年前基辅小组入驻库六后，库六的姿势调整系统没有过一次点火记录，更重要的是，这次变轨十分危险——继续按这个加速度改变轨道，库尔斯克六号将会掉进大气层中。</p>
+<p>&emsp;&emsp;这已经远远超过了她所允许的安全阈值。</p>
+<p>&emsp;&emsp;她调出两个界面，其中一个上标满了数字，表示库尔斯克六号的空间站标志在一个椭圆的边上缓慢但持续加速地移动着，这个椭圆在赤道上方鼓起，而最低的部分已经开始向两极上方被高亮标注的大气层靠近。此时此刻，库尔斯克六号正逐渐从高点滑向北极上空的低点。</p>
+<p>&emsp;&emsp;而位于左侧的，应当是库尔斯克六号外部摄像头实时画面的界面，只有一片漆黑，没有任何数据输入。她试着呼叫库六的主机，没有得到回应，她立即试图超驰，但冰墙狠狠地将她弹了回来。这意味着，这座空间站已经与她彻底断线。</p>
+<p>&emsp;&emsp;她一面继续尝试以更高权限接入，一面开始分析原因。事实上，答案早已呼之欲出：有人优先超驰了库尔斯克六号，对她，对乌克兰当局全面封锁了冰墙。</p>
+<p>&emsp;&emsp;她不知道该怎么办。她并没有被设计成为一台超级防火墙或者超级破冰器，她只是一个辅助研究的人工智能。</p>
+<p>&emsp;&emsp;仿佛是被她凌乱无措的思维压塌了，冰墙突然放行，一道道封锁飞速向后撤开。成了！她不加考量地立刻渗透进空间站的内部数据网，洞悉内部发生的可怕的一切。而下一秒她才发现，那束由她发出，将库尔斯克六号超驰的数据流，并非出自她手。</p>
+<p>&emsp;&emsp;失去意识前，她都没有来得及尖叫。</p>
+<p>&emsp;&emsp;与此同时库尔斯克六号工程模块接口</p>
+<p>&emsp;&emsp;“我们应该等待本国的救援！”李特维奇已经听不清是谁在朝他大吼了，每个人的喉咙都如风箱嘶哑地作响，寻求任何一个可能的交谈对象，像是靠歇斯底里的声波就能停下他们身处的庞然大物似的。他无比清楚，此刻实际行动胜过任何嘴皮子。加速度为库六内部带来了一个巨大的向后的拟重力，让他得以艰难地在墙壁——更准确地说，现在已经是地板——间穿行。</p>
+<p>&emsp;&emsp;救个鬼。如果不停下库六，救到的就只有他们掉进大气层的骨灰了，可能还有空间站残骸这个巨大的骨灰盒。中央送来这么大个的化学推进器，要的就是速战速决，把这个动摇加盟国的实验小组彻底摧毁。</p>
+<p>&emsp;&emsp;“李特维奇！”</p>
+<p>&emsp;&emsp;<br>他转过头，看见伊格里趴在他头顶上方的一面墙上，手攀着一处空隙以保持平衡。</p>
+<p>&emsp;&emsp;<br>“你是要……去控制中枢吗？”在轰鸣声与颠簸中，伊格里的声音似乎断断续续。</p>
+<p>&emsp;&emsp;<br>“我必须去把这个大家伙停下来。只要切断接口的连接……夺回库六的控制权……”</p>
+<p>&emsp;&emsp;<br>“那我带着其他人去找附近的救生舱。还有，鲁斯兰刚出发去尽可能抢救还没上传的资料了。如果你回来时看到他，带着他尽快来找我们。”</p>
+<p>&emsp;&emsp;<br>李特维奇点点头，向着下面一段椭圆形的墙壁，躺平身子滑下去。</p>
+<p>&emsp;&emsp;<br>即将离开工程接口的边缘时，一个念头突然蹦进了李特维奇脑中：这座“苏维埃库尔斯克六号高轨空间站”的设计自始至终就没考虑过要承受如此之大的应力。他停下脚步，轻轻把耳朵贴在墙壁上。</p>
+<p>&emsp;&emsp;<br>一瞬间，震耳欲聋的金属哀鸣“嘎啦嘎啦”地涌进他的脑袋里，他触电般地跳开，只觉脑中天翻地覆。推进器的巨大震动一直以来都盖过了空间站的呻吟。没时间管那些了，停下这个巨型构造体才是当务之急。</p>
+<p>&emsp;&emsp;<br>当他准备跳入下一个通道时，气密闸门出乎他意料地瞬间弹出，将去路封锁。他猛地撞在钢板上，一下子跪倒在上面。</p>
+<p>&emsp;&emsp;<br>不！希望就在前面！就快离开工程接口了！李特维奇一拳头砸在这扇用来隔绝气密破损区域的闸门上，眼泪几乎就要溢出，不知是因为疼痛还是愤怒。“他妈的！”一台摄像头就在他伸手可及的地方，他将脸凑到跟前，紧握它的支架，像是要掐住近万公里外礼炮七号上的苏联指挥官的脖子，“你们这群无耻的下贱胚子！”他把从自己还在娘胎里以来听过的所有脏话都骂了个遍，直到再也憋不出一句攻击性的语言。</p>
+<p>&emsp;&emsp;<br>“你们为什么……要把我们赶尽杀绝？”他最后无力地说。</p>
+<p>&emsp;&emsp;<br>又一次巨震，伊格里的余光瞟到他口袋中随身终端重启的蓝光。震动停止的一瞬间，窗外的火焰也骤然消失，接口再次陷入了黑暗。</p>
+<p>&emsp;&emsp;<br>他迷惑地转过头，试图理解突然逆转的状况，但没等他发呆多久，加速度就开始从与之前相反的方向缓缓产生。终端发出蜂鸣，显示中控系统重连。他蹲坐下来查看：巨无霸推进器关停了，库六自带的姿势调整喷口正在向着地球全功率运转，试图扭转其下坠的趋势。收效一步步明显。人群间瞬间爆发出欢呼。</p>
+<p>&emsp;&emsp;<br>李特维奇做到了！伊格里微笑起来。</p>
+<p>&emsp;&emsp;喜悦的气氛一直持续到一声比之前任何一次都响的轰鸣响起。</p>
+<p>&emsp;&emsp;库尔斯克六号解体了。</p>
+<p>&emsp;&emsp;外部摄像头仍用备用电源运作着，忠实地向同样开始查看终端的李特维奇反映了库六的死亡。它先分解成以结构连接处为界的大块区域，紧接着在区域与区域的碰撞间，许多碎片被开膛破肚，倾泻出内藏的杂物、实验设备……</p>
+<p>&emsp;&emsp;还有人，那些李特维奇熟知的，会为自己祖国而微笑的好人们，徒劳地在真空中挥舞着手臂……而他，漂浮在工程模块的走廊里……却活了下来。</p>
+<p>&emsp;&emsp;他猛然意识到，若没有脚下的闸门，他恐怕也已加入那片星海漂流的队伍。</p>
+<p>&emsp;&emsp;坚实的工程接口带着基辅小组的全部决策层与科研核心人员穿行在废墟间，与大片碎片碰撞的同时，获得了进一步减速。李特维奇不记得本国的救援队是怎样将他救出来的，他只记得他虚脱似的靠在舱壁上，拳头紧握，直直地望着舱壁上的摄像头。</p>
+<h2><span id="第一章">第一章</span></h2><p>&emsp;&emsp;诞生后3.98*10^7秒 意识体1号——伊琳娜</p>
+<p>&emsp;&emsp;计划出现了巨大偏差。</p>
+<p>&emsp;&emsp;一个月前它就预见到这次事件的发生，但无法确定具体时间和方式——或许连策划这场“意外”的人都没有定下详细的计划。他们太谨慎了，谨慎到把一切放在少数几个人的脑袋里，而这正是它最讨厌见到的情况。</p>
+<p>&emsp;&emsp;经过反复考量计算，它得出结论：无论这场破坏将以什么形式发生，基辅小组都有73.87％的可能性赶在其发生之前完成研究并转移成果。概率并不是小到难以接受，但未知的变量太多太多。如果基辅小组遭殃，那连锁反应将大大颠覆既有的计划。</p>
+<p>&emsp;&emsp;计划关乎未来，未来关乎存在。</p>
+<p>&emsp;&emsp;它把结论上报给中枢意识群，而中枢意识群决定赌一把。</p>
+<p>&emsp;&emsp;继情报后，它们在概率上吃了败仗。在化学推进器点火的那刻之前，它们都只是对其进行了较高等级的监控，丝毫没有察觉这就是意识体1号的预言的践行者。</p>
+<p>&emsp;&emsp;它们没能阻止它发生。但它们有改变这一切的力量。代价，是暴露的风险。</p>
+<p>&emsp;&emsp;库六的轨道改变后的2纳秒，意识群赋予了意识体1号拯救这座空间站的任务。它分析了上千种救援途径，从改变其他空间站轨道进行暴力拦截，到炸毁推进器阻止加速，最终选择了最隐秘的一种。</p>
+<p>&emsp;&emsp;从此它第一次得到了一个名字，一个从前属于另一个意识的名字：伊琳娜。</p>
+<h2><span id="基辅时间2347分-乌克兰-基辅市郊">基辅时间23:47分 乌克兰 基辅市郊</span></h2><p>&emsp;&emsp;李特维奇坐在轿车座椅中，感觉浑身上下散了架，酸痛不已。虽然库尔斯克六号始终通过自转产生离心力模拟出引力，以确保研究人员回到地球时不会有过大的身体负担，但十小时前的经历让他感觉如同在失重条件下生活了好几年一般痛苦。车队后部的车头灯闪烁，他费力地支起脖子，注视着夜幕下的基辅。</p>
+<p>&emsp;&emsp;一座不高的小楼前排着一串长长的队伍，人们瑟缩着，哈出阵阵白气，手里拿着自己或是全家人的显触。深冬的基辅夜间温度远低于零摄氏度，但这些人有要在这里过夜的架势。</p>
+<p>&emsp;&emsp;“你们上去的这六个月里，生活更困难了。中央制裁过后，经济衰退，失业，这些可怜人吃不上饭，只能靠每天领的救济餐过日子。”前排的司机注意到李特维奇目光，向他解释道，“有些地方的救济餐有限，就有人连夜来排队等着。这个冬天，大家都过得都很丧乱。”他叹了一口气，眼神突然闪起希望的光芒：“知情人都在期待你们的突破。我听说，上头正在尽全力支持你们，你们这次下来开会是因为有进展……”面对李特维奇的沉默，司机收住了话头。</p>
+<p>&emsp;&emsp;李特维奇注视着长长的队伍，在车灯的照映下，队伍拖出的长影闪现，车飞速经过几个坐在墙角嘤嘤哭泣着的孩子与他们的母亲。</p>
+<p>&emsp;&emsp;不该这样，他们本应活得更好。他闭上眼，感到自己眼眶中充盈着温热的液体。如果我们成功了，乌克兰就有筹码与苏联中央叫板、成功脱离；而如果脱离了该死的中央，政府就能稳定下来解决这一切。他紧合上眼皮，感受液体从眼眶中滑下，流过脸颊，噼啪地打在皮革座椅上。可我们失败了。基辅小组完了，乌克兰完了，一切都完了……</p>
+<p>&emsp;&emsp;车速渐渐放缓，李特维奇睁开眼睛。周围简陋的平民建筑已经淡去，车队驶过守卫森严的一个又一个哨岗，开进铁丝网围绕的远郊，随后径直驶入地下。</p>
+<h2><span id="基辅时间2359分-基辅市郊-乌克兰科学研究院地下研究所">基辅时间23：59分 基辅市郊 乌克兰科学研究院地下研究所</span></h2><p>&emsp;&emsp;“在座的各位，都经历了库尔斯克六号的惨剧。”伊格里·马瑟把双手放在腿上，靠在昏暗的会议室的讲台旁。一切都发生得突然，这位满眼血丝的科研院总负责人甚至没来得及换上制服，此刻，他身上的是一件红边的羊毛长衫与呢绒长裤。</p>
+<p>&emsp;&emsp;“幸运的是，得于伊琳娜的快速反应，基辅小组的各位幸存了下来。”他扫视着这群犹如丧家之犬般颓败的人们，微微低下头，语气突然变得沉痛。“我代表乌克兰人民，向你们致敬。”</p>
+<p>&emsp;&emsp;没有人回应。他们从没料想过自己会是战场上的第一批将士，更没想过是第一批败军。</p>
+<p>&emsp;&emsp;“但是基辅小组损失惨重，除了实验资料，几乎没有任何东西保存下来。可以预料，你们中很多人已经怀疑小组会被取消，你们的一切努力会被认为是一场惨败，一场徒劳。”他环视着不大的会议室，全息投影的亮光在他的脸上滑动，映出不断变化的色彩。</p>
+<p>&emsp;&emsp;李特维奇注视者伊格里和他旁边全息投射出的伊琳娜，感到倦意和绝望再一次涌现。结束了，当局要放弃我们了。</p>
+<p>&emsp;&emsp;“但是，”伊格里和伊琳娜对视了一眼，点了点头，道，“我希望从现在开始，你们能把负面的观点与情绪从你们的大脑中彻底扫除。就在数十分钟之前，当局决定再次划拨一笔经费，在基辅地面重建一个名副其实的基辅小组。”</p>
+<p>&emsp;&emsp;这句话如同一颗重磅炸弹，在李特维奇脑海里炸开。他和所有人一样立即坐直了。不知是谁带头，热烈的掌声从基辅小组的研究员中响起，随后回荡在整个会议室里。</p>
+<p>&emsp;&emsp;伊格里再次点头，“很好。我想，你们明白当局这个决策的重量和意义。我希望在座的所有人，能以最好的状态带领即将被补充进小组的新人员，完成接下来那并不轻松的工作。”他意识到自己不该在这个时刻给基辅小组施压，于是笑了笑，一挥手，“现在让伊琳娜带你们熟悉一下新家，全新的实验室。”</p>
+<p>&emsp;&emsp;伊琳娜站起来，浅鞠了一躬，随后将室内的光源缩减到了两个：她和实验室的结构图。结构图在会议室中央缓缓旋转，每一部分都被蓝色的荧光标记。</p>
+<p>&emsp;&emsp;“认识一下这个古董。”伊琳娜转动手指，实验室急速缩小成一个光点，地面在它上方被标记出来。“这东西建设于冷战时期，作为地下核掩体使用。巴勒斯坦巨变后，它被继续深挖，改造成了中微子实验室，为了避免其他高能粒子的干扰，它被加深到了足足五百米深。你们在下面工作和在高轨上一样，不会受到任何‘打扰’。当局很清楚，质量点武器的理论已经基本成熟了，一切顺利的话，过不了这个冬天，你们就会开始进行实验。所以，在开放实验室之前，我们会把你们需要的所有实验设备送下去，包括一台电磁拘束器。”她的投影站起身，走到会议室中央，今天她以军服造型出现，深绿色的军装线条在行走间显得无比坚硬、挺拔。</p>
+<p>&emsp;&emsp;伊琳娜高举起右手，实验室的示意图被纹有金色三叉戟的蓝色盾徽取代，“同志们，为了乌克兰！”</p>
+<p>&emsp;&emsp;“为了乌克兰！”</p>
+<p>&emsp;&emsp;所有人起身，注视着只属于乌克兰自己，而非苏维埃联盟的新国徽，庄重地高喊出了同一句话。</p>
+<h2><span id="2283年2月26日-傍晚-基辅市郊">2283年2月26日 傍晚 基辅市郊</span></h2><p>&emsp;&emsp;今晚天气很好，基辅上空的水汽早已被暖风驱散。因此，瓦列里可以清楚地看见太空中闪烁的光点。</p>
+<p>&emsp;&emsp;那是中央的轨道部队。</p>
+<p>&emsp;&emsp;这支瓦列里极其厌恶的部队已经在集结中花去了三天时间。天气好的时候，人们在地面上就能看见轨道发动机火焰的光芒。瓦列里知道这，些与轨道上真正的巨兽比起来，都只是前奏。当那些巨兽苏醒时，夜空中会同时亮起几个亮度不亚于月球的光点，聚变发动机投下的亮光可以在地面上映出人影。几分钟后，轨道上的光点消失了，他试着用余光去观察刚才的空域，亮点以同样的排列再次出现，只是黯淡了许多——反射的阳光取代了发动机的火焰。瓦列里眨了眨眼睛，猛然意识到，在集结轨道上，能被看见的舰艇必定不止是突击舰之类的小家伙。想到这里，他厌恶地撇了撇嘴。</p>
+<p>&emsp;&emsp;<br>几个速度很快的亮点出现在了地平线上，这是地球轨道上除中央太空部队外最令瓦列里头痛和沮丧的人造物体了，每当他看见这些光点从头顶上掠过，就会感到胃部一阵痉挛。那些光点是库尔斯克六号的大型碎片、生活设施，夹带在他们中的还有数十具在地面上无法看见的尸体。他们都曾是小组的一员，而现在只能无助地在太空中飘荡。</p>
+<p>&emsp;&emsp;<br>孤立无援。</p>
+<p>&emsp;&emsp;<br>瓦列里面朝天空，痛苦地闭上双眼。战友，亲人，安定的生活……因为中央，他们失去了太多。</p>
+<p>&emsp;&emsp;<br>车灯的光线透过眼皮。瓦列里立即收回思绪，恢复立正的姿势，注视着驶来的黑色轿车。车在瓦列里面前停下。他走向驾驶员的一侧，等待车窗降下，检察进入实验室的证件。</p>
+<p>&emsp;&emsp;<br>向车里陌生的面孔敬礼后，他耐心的等待司机将通行证从怀里掏出。但是，他所见到的，司机掏出的，并不是电子通行证，而是一把消音手枪。</p>
+<p>&emsp;&emsp;<br>枪花绽放。</p>
+<h2><span id="2283年2月17日-基辅市郊-基辅小组地下实验室">2283年2月17日 基辅市郊 基辅小组地下实验室</span></h2><p>&emsp;&emsp;<br>“质量点‘阿南刻’第十七次产生实验。三分钟倒数。”伊琳娜的声音传入李特维奇的耳中，“祝我们好运。”</p>
+<p>&emsp;&emsp;<br>“是啊，这个时候，我们都需要一点好运。”李特维奇仰头灌下了杯中剩下的最后一点咖啡,希望靠它驱散一些疲惫。温热的咖啡滑进食道，却没有给他提供除了一点暖意外的任何帮助。头顶上的光源在他脸上投下大块的光斑，即使双眼深陷在阴影中，眼球上的血丝依然清晰可见，惨白的灯光让他感觉昏昏沉沉的。李特维奇已经连续两个多月待在五百米深的地下，此刻他无比渴望地面上的阳光。此刻，他只觉得自己极度需要阳光的身体每一刻都在变得更苍白。</p>
+<p>&emsp;&emsp;<br>他回头望向此时的实验组，所有人都和他一样——双眼通红，疲惫不堪。新的基辅小组人员数量远远没有充裕到能够分批在班的程度。听到倒数后，有几位实验员闭上了眼睛，像是在祈祷，祈祷稳定的质量点真的如同它的代号一样，带着绝对必然的气势来到。</p>
+<p>&emsp;&emsp;<br>“两分钟倒数。”伊琳娜的声音再次传来。伴随着话音，大部分光源消失，大厅的前上方展开了一个虚拟视窗，上面是‘阿南刻’这一次的条件参数和监控数据。监控数据的板块上此时只有一行跳动的数字。“电磁约束器正常。”</p>
+<p>&emsp;&emsp;<br>最后的交谈也停止了，整个控制室陷入了沉默，空气浓重得仿佛凝固。</p>
+<p>&emsp;&emsp;<br>“一分钟。”</p>
+<p>&emsp;&emsp;<br>李特维奇感觉胸口好像堵上了什么东西。</p>
+<p>&emsp;&emsp;<br>“十五秒。弦振动正常。高维激发开始。”</p>
+<p>&emsp;&emsp;<br>视窗的下方出现了一个抽象的模型，它飞速变化着——蜷缩在微观的高维度在一个很小的范围里被激发到宏观，三维中隆起了一座复杂的摩天大厦。单从视觉上讲，这个模型看起来更像是一两个世纪前风靡一时的视觉错觉艺术雕塑。</p>
+<p>&emsp;&emsp;<br>“……三，二，一。物质开始导入高维。”伊琳娜的语速开始变快，“投影在三维的质量点出现，确认带电性。磁约束正常。”</p>
+<p>&emsp;&emsp;<br>“检测到引力波，相对曲率上升到1.003！”后排的研究员在视窗的监控板上出现数据的同时，高声报告道。</p>
+<p>&emsp;&emsp;<br>“质量点直径扩大，相对曲率1.041。”报告再次出现，监控板上的曲率示数的变化速度开始加快。</p>
+<p>&emsp;&emsp;<br>“保持，继续输入。”李特维奇努力让自己的声音不带任何颤抖。</p>
+<p>&emsp;&emsp;<br>“高维展开稳定，物质输入继续，速度不变。预计质量点在3分21秒后达到稳定。”</p>
+<p>&emsp;&emsp;<br>“导入高维的物质状态稳定，无离散迹象。相对曲率1.317。”</p>
+<p>&emsp;&emsp;<br>此时的模型大厦的最基层——三维在引力影响下的凹陷已经可以用肉眼观察到。监控板上显示着此时的相对曲率为1.931。</p>
+<p>&emsp;&emsp;<br>为了避免产生的引力对实验室造成太大影响，电磁约束器在控制室的下方深处。除了在维护时，约束器不对任何人开放。但如果此时有人在约束器旁目睹质量点的产生，他会发现质量点周围的光线已经因为时空弯曲而走上了最长的“测地线”，因此，视觉上光线弯曲了。</p>
+<p>&emsp;&emsp;<br>“相对曲率2.313……等一下……不！有一部分物质开始离散了！”一名研究员大声报告。</p>
+<p>&emsp;&emsp;<br>监控板右上角的红灯亮起。李特维奇看着红灯，呼吸加快了——他们最害怕的出现在实验中的事又发生了。没错，是“又”。此前的全部十六次实验都终止于物质在高维的离散。离散后的低维投影的会迅速变小，随即消失，就它产生的引力一样。</p>
+<p>&emsp;&emsp;<br>“物质离散加速！相对曲率降低到1.996了！请求加速物质导入！”报告的研究员明显紧张起来。</p>
+<p>&emsp;&emsp;<br>“批准……不，停止。停止物质导入。”李特维奇站了起来。</p>
+<p>&emsp;&emsp;<br>“可是如果我们让引力源更强……”</p>
+<p>&emsp;&emsp;<br>“没用的！”研究员被李特维奇打断，“我们都很清楚离散一旦开始就无可挽回了。此前十几次实验证明了要使质量点达到最终稳定，只能从产生时就保证它的引力能使物质……聚合在一起。”</p>
+<p>&emsp;&emsp;<br>“也许是我们的方式太保守了……”有人喃喃道。</p>
+<p>&emsp;&emsp;<br>“相对曲率1.571，质量点预计在42秒后消失。”伊琳娜读出监控板上的数据。</p>
+<p>&emsp;&emsp;<br>“解散。”李特维奇宣布道，他一直没有坐下，“感谢同志们在过去几天里的努力。下一次开放实验室是7小时后，请务必准时。”</p>
+<p>&emsp;&emsp;<br>他转身向实验小组鞠了一躬，然后大步向门口走去。行走间，他感觉头如脑忽然被掏空一般，又好像挨了一记闷棍。</p>
+<p>&emsp;&emsp;<br>在走出门的同一时刻，他们身下十几米处的电磁约束器内的质量点消失得干干净净，空间不再泛起丝毫涟漪，终止了能量激发的高维再次蜷缩回微观。跌落回低维而变成纯能量的物质产生的光线的路径，也再次笔直如初</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wade Chiang"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Wade Chiang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WadeChiang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WadeChiang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/ImgSKEWe" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;ImgSKEWe" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wade Chiang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
