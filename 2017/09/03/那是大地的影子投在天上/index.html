@@ -306,6 +306,20 @@ mjx-container[display="true"] + br {
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2017/09/03/%E9%82%A3%E6%98%AF%E5%A4%A7%E5%9C%B0%E7%9A%84%E5%BD%B1%E5%AD%90%E6%8A%95%E5%9C%A8%E5%A4%A9%E4%B8%8A/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/03/那是大地的影子投在天上/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -373,6 +387,13 @@ mjx-container[display="true"] + br {
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -586,6 +607,37 @@ mjx-container[display="true"] + br {
     
 
   
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://WadeChiang.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://yoursite.com/2017/09/03/%E9%82%A3%E6%98%AF%E5%A4%A7%E5%9C%B0%E7%9A%84%E5%BD%B1%E5%AD%90%E6%8A%95%E5%9C%A8%E5%A4%A9%E4%B8%8A/";
+    this.page.identifier = "2017/09/03/那是大地的影子投在天上/";
+    this.page.title = "那是大地的影子投在天上";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://WadeChiang.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
 
 </body>
 </html>
