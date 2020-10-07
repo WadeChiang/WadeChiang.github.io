@@ -131,10 +131,10 @@
     <title>KMP Algorithm</title>
     <url>/2020/10/07/KMP-Algorithm/</url>
     <content><![CDATA[<blockquote>
-<p>注0：本文是在<a href="https://oi-wiki。org/string/kmp/">OI.Wiki-前缀函数与KMP算法</a>的基础上写成的，二者有许多相似性。</p>
-<p>注1：本文一切下标遵循由’0’开始的原则。</p>
+<p>注0：本文是在<a href="https://oi-wiki。org/string/kmp/">OI.Wiki-前缀函数与KMP算法</a>的基础上写成的，二者有诸多相似。</p>
+<p>注1：本文一切下标遵循从’0’开始的原则。</p>
 </blockquote>
-<p>现有文本串$t$与模式串$p$，KMP算法的目的是用尽可能小的时间复杂度找到并输出$t$在$p$出现的所有位置。</p>
+<p>现有文本串$t$与模式串$p$，要求用尽可能小的时间复杂度找到并输出$t$在$p$出现的所有位置。</p>
 <p>解决此问题的关键在于前缀函数。</p>
 <h2><span id="前缀函数pii">前缀函数$\pi[i]$</span></h2><p>前缀、后缀、真前缀与真后缀等概念见<a href="https://oi-wiki。org/string/basic/">OI.Wiki-String基础</a>。</p>
 <p>对于字符串$s[0\dots n],$其前缀函数$\pi[i]$定义为：</p>
@@ -164,9 +164,32 @@
 <p>构造串$p+\%+t$，其中$\%$为一个既不出现在$p$中也不出现在$t$中的分隔符。接下来计算该字符串的前缀函数。现在考虑该前缀函数除去最开始$n+1$个值（即属于字符串$p$和分隔符的函数值）后其余函数值的意义。根据定义，$\pi[i]$为右端点在$i$且同时为一个前缀的最长真子串的长度，具体到我们的这种情况下，其值为与$p$的前缀相同且右端点位于$i$的最长子串的长度。由于分隔符的存在，该长度不可能超过$n$。而如果等式$\pi[i]=n$成立，则意味着$p$完整出现在该位置（即其右端点位于位置$i$）。注意，该位置的下标是对字符串$p+\%+t$而言的。</p>
 <p>因此如果在某一位置$i$有$\pi[i]=n$成立，则字符串$p$在字符串$t$的$i-(n-1)-(n+1)=i-2n$处出现。</p>
 <p>KMP算法在O(m+n)的时间复杂度下解决了此问题。</p>
+<h2><span id="例题">例题</span></h2><blockquote>
+<p>题目来自BUPT-ExitedOJ</p>
+</blockquote>
+<h3><span id="题目描述">题目描述</span></h3><p>已知串s和t均由小写字母组成，且串s和t中可能包含重复字母。</p>
+<p>试找出串t在串s中出现的所有位置。</p>
+<p>输入格式<br>第一行为一个字符串s，由小写字母构成。(Len(s) &lt; 1000000)<br>第二行为一个字符串t，由小写字母构成。(Len(t) &lt; 1000000)</p>
+<h3><span id="输出格式">输出格式</span></h3><p>输出若干行，为串t在串s中出现的所有位置，按从小往大依次输出。</p>
+<h3><span id="sample-input-1">Sample Input 1</span></h3><p>acabaabaabcacaabc</p>
+<p>abaabcac</p>
+<h3><span id="sample-output-1">Sample Output 1</span></h3><p>6</p>
+<h3><span id="sample-input-2">Sample Input 2</span></h3><p>aaaaa</p>
+<p>a</p>
+<h3><span id="sample-output-2">Sample Output 2</span></h3><p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<h3><span id="ac代码">AC代码</span></h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">str</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> ch[<span class="number">2000000</span> + <span class="number">1</span>]&#123; <span class="number">0</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> pi[<span class="number">2000000</span> + <span class="number">1</span>]&#123; <span class="number">0</span> &#125;;</span><br><span class="line">    <span class="keyword">int</span> length = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getLength</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        length = <span class="built_in">strlen</span>(ch);</span><br><span class="line">        <span class="keyword">return</span> length;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getPi</span><span class="params">(<span class="keyword">int</span> length)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (; i &lt; length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> j = pi[i - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; ch[i] != ch[j])</span><br><span class="line">            &#123;</span><br><span class="line">                j = pi[j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (ch[i] == ch[j])</span><br><span class="line">            &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            pi[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">str s1, s2;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s1.ch;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s2.ch;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> subStringLength = s2.getLength();</span><br><span class="line">    s2.ch[subStringLength] = <span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">    <span class="keyword">int</span> textLength = s1.getLength();</span><br><span class="line">    <span class="built_in">strncpy</span>(s2.ch + subStringLength + <span class="number">1</span>, s1.ch, textLength);</span><br><span class="line"></span><br><span class="line">    s2.getPi(subStringLength + textLength + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = subStringLength + <span class="number">1</span>; i &lt; subStringLength + textLength + <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (s2.pi[i] == subStringLength)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; i - <span class="number">2</span> * subStringLength + <span class="number">1</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：我院数据结构课的要求是必须自己实现串的数据结构，但是可以调用C/C++库中的方法。</p>
+<p>但是由此产生了一个问题：C++的数据结构由于被类封装，对数据结构的处理方法与数据结构本身是绑定在一起的。当使用自己定义的数据结构时，就无法使用数据结构自身的方法。但是C将数据结构与方法分离，我可以简便的使用<code>&lt;cstring&gt;</code>中的strlen()方法。</p>
+<p>由此引出了OOP受到批评的原因之一：数据结构与方法是根本不同的元素，它们不应该被绑定在一起。用类封装不总是合适的。</p>
+</blockquote>
 ]]></content>
       <tags>
-        <tag>数据结构与算法</tag>
+        <tag>数据结构与算法 串 KMP算法</tag>
       </tags>
   </entry>
   <entry>
