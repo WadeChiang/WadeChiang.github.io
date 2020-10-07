@@ -671,4 +671,44 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 <p>&emsp;&emsp;<br>在走出门的同一时刻，他们身下十几米处的电磁约束器内的质量点消失得干干净净，空间不再泛起丝毫涟漪，终止了能量激发的高维再次蜷缩回微观。跌落回低维而变成纯能量的物质产生的光线的路径，也再次笔直如初</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>KMP Algorithm</title>
+    <url>/2020/10/07/KMP-Algorithm/</url>
+    <content><![CDATA[<blockquote>
+<p>注0：本文是在<a href="https://oi-wiki。org/string/kmp/">OI.Wiki-前缀函数与KMP算法</a>的基础上写成的，二者有许多相似性。</p>
+<p>注1：本文一切下标遵循由’0’开始的原则。</p>
+</blockquote>
+<h2><span id="前缀函数pii">前缀函数$\pi[i]$</span></h2><p>前缀、后缀、真前缀与真后缀等概念见<a href="https://oi-wiki。org/string/basic/">OI.Wiki-String基础</a>。</p>
+<p>对于字符串$s[0\dots n],$其前缀函数$\pi[i]$定义为：</p>
+<script type="math/tex; mode=display">\pi[i]=\max _{k=0 \ldots i}\{k: s[0 \ldots k-1]=s[i-(k-1) \ldots i]\}</script><h2><span id="计算前缀函数">计算前缀函数</span></h2><p>容易得到$O(n^3)$的朴素方法:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">getPi</span><span class="params">(<span class="built_in">string</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> length = (<span class="keyword">int</span>)s.length();</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">pi</span><span class="params">(length)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; length; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.substr(<span class="number">0</span>, j) == s.substr(i - j + <span class="number">1</span>, j))</span><br><span class="line">            &#123;</span><br><span class="line">                pi[i] = j;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pi;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>string substr (size_t pos = 0, size_t len = npos) const;</code></p>
+</blockquote>
+<p>接下来在此基础上进行优化。</p>
+<h3><span id="优化">优化</span></h3><p>注意到,$\pi[i+1]$至多比$\pi[i]$大1。即i++时，最好的情况是$s[i+1]=s[\pi[i]+1]\rightarrow\pi[i+1]=\pi[i]+1$。</p>
+<p>由此得到$-\pi[i]\leqslant\pi[i+1]-\pi[i]\leqslant1$。</p>
+<p>优化后的代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">getPi</span><span class="params">(<span class="built_in">string</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> length = (<span class="keyword">int</span>)s.length();</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">pi</span><span class="params">(length)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; length; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = pi[i - <span class="number">1</span>] + <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.substr(<span class="number">0</span>, j) == s.substr(i - j + <span class="number">1</span>, j))</span><br><span class="line">            &#123;</span><br><span class="line">                pi[i] = j;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pi;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过令$j_{i}=\pi[i-1]+1$，我们优化了比较次数。</p>
+<p>讨论过$\pi[i+1]=\pi[i]+1$的最好情况：$s[\pi[i]]=s[i+1]$后，现在讨论$s[\pi[i]]\neq s[i+1]$的情况下，如何优化<code>j</code>的跳转。</p>
+<p>失配时，我们希望找到对于子串$s[0\dots i]$仅次于$\pi[i]$的第二长度$k$，使得$s[0\dots k-1]=s[i-k+1\dots i]$，即使得在位置$i$处的前缀性质仍然得以保持。</p>
+<p>当找到这样的$k$后，我们只需比较$s[k]$与$s[i+1]$，若$s[k]=s[i+1]$，则$\pi[i+1]=k$，否则我们需要找到仅次于$k$的第二长度$k^{(2)}$，$k^{(2)}$使得位置$i$处的前缀性质仍然保持。如此重复迭代，直到$k=0$。若$s[0]\neq s[i+1],\space\pi[i+1]=0$。</p>
+<p>观察到，因为对任意的i，都有$s[0\dots \pi[i]-1]=s[i-\pi[i]+1\dots i]$，因此对于$s[0\dots i]$的第二长度$k$有</p>
+<script type="math/tex; mode=display">s[0\dots k-1]=s[i-k+1\dots i]=s[\pi[i]-k\dots\pi[i]-1]</script><p>即，由于$s[0\dots k-1]$与长度为$i$的子串串末$k$位匹配，而$s[0\dots \pi[i]-1]$与长度为$i$的子串串末$\pi[i]$位匹配，又有$k&lt;\pi[i]$，所以$s[0\dots k-1]$与串$s[0\dots \pi[i]-1]$的末$k$位匹配。在此情况下，$k$就是长度为$\pi[i]$的子串的前缀函数值。即$\pi[\pi[i]-1]=k$（注意下标从0开始）。</p>
+<p>同理可得，仅次于$k$的第二长度$k^{(2)}$等于串$s[0\dots k-1]$的前缀函数值，$k^{(2)}=\pi[k-1]$。</p>
+<p>由此我们推出了关于$k^{(n)}$的状态转移方程：$k^{(n)}=\pi[k^{(n-1)}-1],k^{(n-1)}&gt;0$。</p>
+<p>最终，依靠状态转移方程我们可以优化代码中<code>j</code>的跳转。最终得到的版本：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">getPi</span><span class="params">(<span class="built_in">string</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> length = (<span class="keyword">int</span>)s.length();</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">pi</span><span class="params">(length)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; length; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j = pi[i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; s[j] != s[i + <span class="number">1</span>]) <span class="comment">//若s[j]!=s[i+1]，通过状态转移方程找到下一个第二长度</span></span><br><span class="line">        &#123;</span><br><span class="line">            j = pi[j - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (s[j] == s[i + <span class="number">1</span>])</span><br><span class="line">        &#123;</span><br><span class="line">            j++; <span class="comment">//若s[j]==s[i+1]，长度为i的子串的前缀函数为j+1</span></span><br><span class="line">        &#125;</span><br><span class="line">        pi[i] = j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pi;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此，我们得到了只经过一重循环，且不需要进行字符串比较的计算前缀函数算法。其复杂度为O(n)。</p>
+<h2><span id="kmp算法">KMP算法</span></h2><p>现给出文本串$t$与模式串$p$，我们尝试找到并展示$t$在$p$中的所有出现。</p>
+<p>记<code>t.length()</code>为$m$，<code>p.length()</code>为$n$。</p>
+<p>构造串$p+#+t$，其中$#$为一个既不出现在$p$中也不出现在$t$中的分隔符。接下来计算该字符串的前缀函数。现在考虑该前缀函数除去最开始$n+1$个值（即属于字符串$p$和分隔符的函数值）后其余函数值的意义。根据定义，$\pi[i]$为右端点在$i$且同时为一个前缀的最长真子串的长度，具体到我们的这种情况下，其值为与$p$的前缀相同且右端点位于$i$的最长子串的长度。由于分隔符的存在，该长度不可能超过$n$。而如果等式$\pi[i]=n$成立，则意味着$p$完整出现在该位置（即其右端点位于位置$i$）。注意，该位置的下标是对字符串$p+#+t$而言的。</p>
+<p>因此如果在某一位置$i$有$\pi[i]=n$成立，则字符串$p$在字符串$t$的$i-(n-1)-(n+1)=i-2n$处出现。</p>
+<p>KMP算法在O(m+n)的时间复杂度下解决了此问题。</p>
+]]></content>
+      <tags>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
 </search>
