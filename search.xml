@@ -886,7 +886,7 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 <p><code>sar k,D</code>|D$\leftarrow$D$&gt;&gt;_A$k,A:Algorithm</p>
 <p><code>shr k,D</code>|D$\leftarrow$D$&gt;&gt;_L$k,L:Logic</p>
 <hr>
-<p>16byte运算<br>|||<br>|:—————-|:————|<br>|<code>imultq S</code>|R[%rdx]:R[%rax]$\leftarrow$S<em>R[%rax]|<br>|<code>multq S</code>|R[%rdx]:R[%rax]$\leftarrow$S</em>R[%rax]|<br>|<code>cqto</code>|R[%rdx]:R[%rax]$\leftarrow$符号扩展R[%rax]|<br>|<code>idivq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|<br>|<code>divq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|</p>
+<p>16byte运算<br>|指令|效果|<br>|:—————-|:————|<br>|<code>imultq S</code>|R[%rdx]:R[%rax]$\leftarrow$S<em>R[%rax]|<br>|<code>multq S</code>|R[%rdx]:R[%rax]$\leftarrow$S</em>R[%rax]|<br>|<code>cqto</code>|R[%rdx]:R[%rax]$\leftarrow$符号扩展R[%rax]|<br>|<code>idivq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|<br>|<code>divq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|</p>
 <h2><span id="控制">控制</span></h2><h3><span id="条件码">条件码</span></h3><p>CF:进位标志</p>
 <p>ZF:零位标志</p>
 <p>SF:符号标志</p>
@@ -1085,7 +1085,7 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 </div>
 ]]></content>
       <tags>
-        <tag>CSAPP,汇编语言</tag>
+        <tag>-CSAPP -汇编语言</tag>
       </tags>
   </entry>
 </search>
