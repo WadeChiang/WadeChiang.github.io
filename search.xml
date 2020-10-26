@@ -788,6 +788,7 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 </tbody>
 </table>
 </div>
+<a id="more"></a>
 <h2><span id="操作数指示符">操作数指示符</span></h2><div class="table-container">
 <table>
 <thead>
@@ -886,7 +887,7 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 <p><code>sar k,D</code>|D$\leftarrow$D$&gt;&gt;_A$k,A:Algorithm</p>
 <p><code>shr k,D</code>|D$\leftarrow$D$&gt;&gt;_L$k,L:Logic</p>
 <hr>
-<p>16byte运算<br>|指令|效果|<br>|:—————-|:————|<br>|<code>imultq S</code>|R[%rdx]:R[%rax]$\leftarrow$S<em>R[%rax]|<br>|<code>multq S</code>|R[%rdx]:R[%rax]$\leftarrow$S</em>R[%rax]|<br>|<code>cqto</code>|R[%rdx]:R[%rax]$\leftarrow$符号扩展R[%rax]|<br>|<code>idivq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|<br>|<code>divq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|</p>
+<p>16byte运算<br>|指令|效果|<br>|:—————-|:————|<br>|<code>imultq S</code>|R[%rdx]:R[%rax]$\leftarrow$S<em>R[%rax]|<br>|<code>multq S</code>|R[%rdx]:R[%rax]$\leftarrow$S</em>R[%rax]|<br>|<code>cqto</code>|R[%rdx]:R[%rax]$\leftarrow$符号扩展R[%rax]|<br>|<code>idivq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>|同上|R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|<br>|<code>divq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>|同上|R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|</p>
 <h2><span id="控制">控制</span></h2><h3><span id="条件码">条件码</span></h3><p>CF:进位标志</p>
 <p>ZF:零位标志</p>
 <p>SF:符号标志</p>
@@ -933,51 +934,51 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 <tr>
 <td style="text-align:left"><code>setg D</code></td>
 <td style="text-align:left"><code>setnle</code></td>
-<td style="text-align:left">D$\leftarrow$~(SF^OF)&amp;~ZF</td>
+<td style="text-align:left">D$\leftarrow<code>$~(SF^OF)&amp;~ZF</code></td>
 <td style="text-align:left">$&gt;_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setge D</code></td>
 <td style="text-align:left"><code>setnl</code></td>
-<td style="text-align:left">D$\leftarrow$~(SF^OF)</td>
+<td style="text-align:left">D$\leftarrow$<code>~(SF^OF)</code></td>
 <td style="text-align:left">$&gt;=_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setl D</code></td>
 <td style="text-align:left"><code>setnge</code></td>
-<td style="text-align:left">D$\leftarrow$SF^OF</td>
+<td style="text-align:left">D$\leftarrow$<code>SF^OF</code></td>
 <td style="text-align:left">$&lt;_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setle D</code></td>
 <td style="text-align:left"><code>setng</code></td>
-<td style="text-align:left">D$\leftarrow$(SF^OF)\</td>
-<td style="text-align:left">ZF</td>
+<td style="text-align:left">D$\leftarrow$`(SF^OF)</td>
+<td style="text-align:left">ZF`</td>
 <td>$&lt;=_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>seta D</code></td>
 <td style="text-align:left"><code>setnbe</code></td>
-<td style="text-align:left">D$\leftarrow$~CF&amp;~ZF</td>
+<td style="text-align:left">D$\leftarrow$<code>~CF&amp;~ZF</code></td>
 <td style="text-align:left">$&gt;_U$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setae D</code></td>
 <td style="text-align:left"><code>setnb</code></td>
-<td style="text-align:left">D$\leftarrow$~CF</td>
+<td style="text-align:left">D$\leftarrow$<code>~CF</code></td>
 <td style="text-align:left">$&gt;=_U$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setb D</code></td>
 <td style="text-align:left"><code>setnae</code></td>
-<td style="text-align:left">D$\leftarrow$CF</td>
+<td style="text-align:left">D$\leftarrow$<code>CF</code></td>
 <td style="text-align:left">$&lt;_U$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setbe D</code></td>
 <td style="text-align:left"><code>setna</code></td>
-<td style="text-align:left">D$\leftarrow$CF\</td>
-<td style="text-align:left">ZF</td>
+<td style="text-align:left">D$\leftarrow$`CF</td>
+<td style="text-align:left">ZF`</td>
 <td>$&lt;=_U$</td>
 </tr>
 </tbody>
@@ -1051,8 +1052,8 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 <tr>
 <td style="text-align:left"><code>jle Label</code></td>
 <td style="text-align:left"><code>jng</code></td>
-<td style="text-align:left">(SF^OF)\</td>
-<td style="text-align:left">ZF</td>
+<td style="text-align:left">(SF^OF)`</td>
+<td style="text-align:left">`ZF</td>
 <td>$&lt;=_A$</td>
 </tr>
 <tr>
@@ -1076,8 +1077,8 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
 <tr>
 <td style="text-align:left"><code>jbe Label</code></td>
 <td style="text-align:left"><code>jna</code></td>
-<td style="text-align:left">CF\</td>
-<td style="text-align:left">ZF</td>
+<td style="text-align:left">CF`</td>
+<td style="text-align:left">`ZF</td>
 <td>$&lt;=_U$</td>
 </tr>
 </tbody>
