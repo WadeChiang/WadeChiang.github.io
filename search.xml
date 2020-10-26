@@ -177,7 +177,7 @@
 <tbody>
 <tr>
 <td style="text-align:left">立即数寻址</td>
-<td style="text-align:left">$ $Imm$</td>
+<td style="text-align:left">$ Imm</td>
 <td style="text-align:left">$Imm$</td>
 </tr>
 <tr>
@@ -224,7 +224,6 @@
 <td style="text-align:left">比例变址寻址</td>
 <td style="text-align:left">$(r_b,r_i,s)$</td>
 <td style="text-align:left">$M[R[r_b]+R[r_i]\cdot s]$</td>
-<td>\</td>
 </tr>
 <tr>
 <td style="text-align:left">比例变址寻址</td>
@@ -243,8 +242,8 @@
 <p><em>栈是向下生长的</em></p>
 <p><code>pushq S</code>|R[%rsp]$\leftarrow$R[%rsp]-8;M[R[%res]]$\leftarrow$S</p>
 <p><code>popq D</code>|D$\leftarrow$M[R[%rsp]];R[%rsp]$\leftarrow$R[%rsp]+8</p>
-<h2><span id="算数和逻辑操作">算数和逻辑操作</span></h2><p><code>leaq S,D</code>|D$\leftarrow$&amp;S</p>
 <hr>
+<h2><span id="算数和逻辑操作">算数和逻辑操作</span></h2><p><code>leaq S,D</code>|D$\leftarrow$&amp;S</p>
 <p><code>inc D</code></p>
 <p><code>dec D</code></p>
 <p><code>neg D</code></p>
@@ -263,7 +262,47 @@
 <p><code>sar k,D</code>|D$\leftarrow$D$&gt;&gt;_A$k,A:Algorithm</p>
 <p><code>shr k,D</code>|D$\leftarrow$D$&gt;&gt;_L$k,L:Logic</p>
 <hr>
-<p>16byte运算<br>|指令|效果|<br>|:—————-|:————|<br>|<code>imultq S</code>|R[%rdx]:R[%rax]$\leftarrow$S<em>R[%rax]|<br>|<code>multq S</code>|R[%rdx]:R[%rax]$\leftarrow$S</em>R[%rax]|<br>|<code>cqto</code>|R[%rdx]:R[%rax]$\leftarrow$符号扩展R[%rax]|<br>|<code>idivq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|<br>|<code>divq S</code>|R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S|<br>||R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S|</p>
+<p>16byte运算</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>imultq S</code></td>
+<td style="text-align:left">R[%rdx]:R[%rax]$\leftarrow$S*R[%rax]</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>multq S</code></td>
+<td style="text-align:left">R[%rdx]:R[%rax]$\leftarrow$S*R[%rax]</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>cqto</code></td>
+<td style="text-align:left">R[%rdx]:R[%rax]$\leftarrow$符号扩展R[%rax]</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>idivq S</code></td>
+<td style="text-align:left">R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>divq S</code></td>
+<td style="text-align:left">R[%rdx]$\leftarrow$R[%rdx]:R[%rax] mod S</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">R[%rax]$\leftarrow$R[%rdx]:R[%rax] /S</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2><span id="控制">控制</span></h2><h3><span id="条件码">条件码</span></h3><p>CF:进位标志</p>
 <p>ZF:零位标志</p>
 <p>SF:符号标志</p>
@@ -316,46 +355,44 @@
 <tr>
 <td style="text-align:left"><code>setge D</code></td>
 <td style="text-align:left"><code>setnl</code></td>
-<td style="text-align:left">D$\leftarrow$<code>~(SF^OF)</code></td>
+<td style="text-align:left">D$\leftarrow$~(SF^OF)</td>
 <td style="text-align:left">$&gt;=_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setl D</code></td>
 <td style="text-align:left"><code>setnge</code></td>
-<td style="text-align:left">D$\leftarrow$<code>SF^OF</code></td>
+<td style="text-align:left">D$\leftarrow$SF^OF</td>
 <td style="text-align:left">$&lt;_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setle D</code></td>
 <td style="text-align:left"><code>setng</code></td>
-<td style="text-align:left">D$\leftarrow$`(SF^OF)</td>
-<td style="text-align:left">ZF`</td>
-<td>$&lt;=_A$</td>
+<td style="text-align:left">D$\leftarrow$(SF^OF)&#124;ZF</td>
+<td style="text-align:left">$&lt;=_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>seta D</code></td>
 <td style="text-align:left"><code>setnbe</code></td>
-<td style="text-align:left">D$\leftarrow$<code>~CF&amp;~ZF</code></td>
+<td style="text-align:left">D$\leftarrow$~CF&amp;~ZF</td>
 <td style="text-align:left">$&gt;_U$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setae D</code></td>
 <td style="text-align:left"><code>setnb</code></td>
-<td style="text-align:left">D$\leftarrow$<code>~CF</code></td>
+<td style="text-align:left">D$\leftarrow$~CF</td>
 <td style="text-align:left">$&gt;=_U$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setb D</code></td>
 <td style="text-align:left"><code>setnae</code></td>
-<td style="text-align:left">D$\leftarrow$<code>CF</code></td>
+<td style="text-align:left">D$\leftarrow$CF</td>
 <td style="text-align:left">$&lt;_U$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>setbe D</code></td>
 <td style="text-align:left"><code>setna</code></td>
-<td style="text-align:left">D$\leftarrow$`CF</td>
-<td style="text-align:left">ZF`</td>
-<td>$&lt;=_U$</td>
+<td style="text-align:left">D$\leftarrow$CF&#124;ZF</td>
+<td style="text-align:left">$&lt;=_U$</td>
 </tr>
 </tbody>
 </table>
@@ -428,9 +465,8 @@
 <tr>
 <td style="text-align:left"><code>jle Label</code></td>
 <td style="text-align:left"><code>jng</code></td>
-<td style="text-align:left">(SF^OF)`</td>
-<td style="text-align:left">`ZF</td>
-<td>$&lt;=_A$</td>
+<td style="text-align:left">(SF^OF)&#124;ZF</td>
+<td style="text-align:left">$&lt;=_A$</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>ja Label</code></td>
@@ -453,9 +489,8 @@
 <tr>
 <td style="text-align:left"><code>jbe Label</code></td>
 <td style="text-align:left"><code>jna</code></td>
-<td style="text-align:left">CF`</td>
-<td style="text-align:left">`ZF</td>
-<td>$&lt;=_U$</td>
+<td style="text-align:left">CF&#124;ZF</td>
+<td style="text-align:left">$&lt;=_U$</td>
 </tr>
 </tbody>
 </table>
