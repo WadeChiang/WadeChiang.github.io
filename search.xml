@@ -1127,4 +1127,28 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
         <tag>KMP算法</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Review of Relation</title>
+    <url>/2020/11/03/Review-of-Relation/</url>
+    <content><![CDATA[<h1><span id="relation-and-closure">Relation and Closure</span></h1><p>$R$ is a relation on set $A$. If $R\subseteq S$,and $S$ has the property $P$(such as reflexive, symmetric or transitive), and $S$ is the smallest set that contain $R$ and has $P$, we say $S$ is the <strong>Closure</strong> of $R$ in $P$.</p>
+<h2><span id="reflexive-closure">Reflexive Closure</span></h2><p>for set $A$.</p>
+<p>$\Delta=\{(a,a)|a\in A\}$. </p>
+<p>For any $R$ on $A$, its reflexive closure is $R\cup\Delta$</p>
+<h2><span id="symmetric-closure">Symmetric Closure</span></h2><p>for set $A$.</p>
+<p>$R^{-1}=\{(b,a)|(a,b)\in R\}$. </p>
+<p>For any $R$ on $A$, its symmetric closure is $R\cup R^{-1}$</p>
+<h2><span id="transitive-closure">Transitive Closure</span></h2><p>Connectivity Relation: $R$ is a relation on $A$. A connectivity relation $R^*=\bigcup_{n=1}^{\infty}R^n$. </p>
+<p>Let $R’$ be the transitive closure of R, then $R’=R^*$.</p>
+<p>Hence, to get the transitive closure of $R$, we need to calculate $M_{R^*}=\vee_{i=1}^nM_R^{[i]}$. $M_R$ is a 0-1 Matrix of $R$, which defined on n elements.</p>
+<h3><span id="warshell-algorithm">Warshell Algorithm</span></h3><p>Let $W_0=M_R$. $\forall k \in \{1,2,\cdots,n\}, W_k=[w_{ij}^{[k]}]$, $w_{ij}^{[k]}=w_{ij}^{[k-1]}\vee(w_{ik}^{[k-1]}\land w_{kj}^{[k-1]})$. $W_n=M_{R^*}$.</p>
+<h1><span id="partial-order">Partial Order</span></h1><p>$(S,\preccurlyeq)$ is a linear order(total order) set $\iff$ $\forall a,b\in S$,$a\preccurlyeq b$ or $b\preccurlyeq a$. A total order set is also called a chain.</p>
+<p>For partial order set $(S,\preccurlyeq)$, if $\preccurlyeq$ is a linear order, and every non-empty subset of $S$ has a minimum element, we call it a <strong>well ordered set</strong>. </p>
+<h2><span id="well-ordered-induction">Well-ordered Induction</span></h2><p>$S$ is a well ordered set. $\forall y\in S$, if $P(x)$ is true for all $x\in S$ $\land$ $x\prec y$ leading to $P(y)$ is true, then $\forall x\in S, P(x)$ is true.</p>
+<h2><span id="quasiorder">Quasiorder</span></h2><p>A relation $R$ on a set $A$ is called quasiorder if it is transitive and irreflexive.</p>
+]]></content>
+      <tags>
+        <tag>离散数学</tag>
+        <tag>关系</tag>
+      </tags>
+  </entry>
 </search>
