@@ -1130,7 +1130,7 @@ L_x(x,y,z,\lambda,\mu)=0</script><script type="math/tex; mode=display">L_y(x,y,z
   <entry>
     <title>Review of Relation</title>
     <url>/2020/11/03/Review-of-Relation/</url>
-    <content><![CDATA[<h1><span id="relation-and-closure">Relation and Closure</span></h1><p>$R$ is a relation on set $A$. If $R\subseteq S$,and $S$ has the property $P$(such as reflexive, symmetric or transitive), and $S$ is the smallest set that contain $R$ and has $P$, we say $S$ is the <strong>Closure</strong> of $R$ in $P$.</p>
+    <content><![CDATA[<h1><span id="relation-and-closure">Relation and Closure</span></h1><p>$R$ is a relation on set $A$. If there exists a relation $S$ with property $P$ that includes $R$, and $S$ being a subset of all relations that has property $P$ and includes $R$, then $S$ is a closure of $R$ with respect to $P$.</p>
 <h2><span id="reflexive-closure">Reflexive Closure</span></h2><p>for set $A$.</p>
 <p>$\Delta=\{(a,a)|a\in A\}$. </p>
 <p>For any $R$ on $A$, its reflexive closure is $R\cup\Delta$</p>
